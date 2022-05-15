@@ -14,7 +14,7 @@ const Home = () => {
     if (tableData) {
       setList(JSON.parse(tableData));
     } else {
-      fetch("http://localhost:3000/api/grokking-the-coding-interview")
+      fetch("http://sde-sheets.vercel.app/api/grokking-the-coding-interview")
         .then((response) => response.json())
         .then((data) => setList(data));
     }
