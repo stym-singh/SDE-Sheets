@@ -6,9 +6,11 @@ const Accordion = ({ patterns, onStatusChange, onNotesChange }) => {
     <Collapse.Group
       accordion={false}
       aria-label="A simple collapse to view categories"
+      shadow
+      bordered
     >
       {patterns.map((pattern, patternIndex) => (
-        <Collapse key={pattern.name} title={pattern.name}>
+        <Collapse key={pattern.name} title={pattern.name} css={{ px: "10px" }}>
           <QuestionsList
             questions={pattern.questions}
             patternIndex={patternIndex}

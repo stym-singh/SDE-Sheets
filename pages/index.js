@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Card, Container, Row, Spacer, Text } from "@nextui-org/react";
+import { Container, Row, Spacer, Text } from "@nextui-org/react";
 import Head from "next/head";
 import ThemeToggle from "../components/ThemeToggle";
 import Accordion from "../components/Accordion";
@@ -57,15 +57,12 @@ const Home = () => {
             <Text h1>{list.name}</Text>
           </Row>
           <Spacer />
-          <Card>
-            <Accordion
-              patterns={list.patterns}
-              onStatusChange={handleStatusChange}
-              onNotesChange={handleNotesChange}
-            />
-          </Card>
-          <Spacer />
-          <Row justify="center">
+          <Accordion
+            patterns={list.patterns}
+            onStatusChange={handleStatusChange}
+            onNotesChange={handleNotesChange}
+          />
+          <Row justify="center" css={{ py: "20px" }}>
             <Text>Made with 💜 by Satyam Singh</Text>
           </Row>
         </Container>
