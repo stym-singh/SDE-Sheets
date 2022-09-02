@@ -1,4 +1,4 @@
-import { Button, Link, Table } from "@nextui-org/react";
+import { Badge, Link, Table } from "@nextui-org/react";
 import Notes from "./Notes";
 import QuestionStatus from "./QuestionStatus";
 
@@ -37,6 +37,7 @@ const QuestionsList = ({
               <Table.Cell>
                 <Link
                   color="text"
+                  isExternal
                   href={question.url}
                   underline
                   target="_blank"
@@ -45,16 +46,9 @@ const QuestionsList = ({
                 </Link>
               </Table.Cell>
               <Table.Cell>
-                <Button
-                  auto
-                  color={colorDifficulty(question.difficulty)}
-                  rounded
-                  light
-                  bordered
-                  size="xs"
-                >
+                <Badge color={colorDifficulty(question.difficulty)}>
                   {question.difficulty.toUpperCase()}
-                </Button>
+                </Badge>
               </Table.Cell>
               <Table.Cell>
                 <Notes
